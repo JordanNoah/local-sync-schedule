@@ -58,16 +58,12 @@ class external_grouping extends external_api
 
         $totalPages = ceil($DB->get_record_sql("SELECT COUNT(*) AS 'total_rows' FROM mdl_groupings WHERE courseid = ".$courseId)->total_rows / $limit);
 
-        $lm = array(
+        return array(
             "offset" => $offset,
             "pageMissing" => $totalPages - ($page + 1),
             "totalPages" => $totalPages,
             "groupings" => array_values($DB->get_records_sql("SELECT * FROM mdl_groupings LIMIT 10 OFFSET ".$offset))
         );
-
-        error_log(json_encode($lm));
-
-        return $lm;
     }
 
     public static function get_grouping_data_returns()

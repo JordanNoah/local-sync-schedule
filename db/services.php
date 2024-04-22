@@ -75,7 +75,7 @@ $functions = [
     ],
     'local_sync_schedule_course_group_grouping' => [
         'classname' => 'local_sync_schedule\external_group_grouping',
-        'methodname' => 'get_group_grouping',
+        'methodname' => 'get_grouping_group',
         'description' => 'get course grouping counter',
         'type' => 'read',
         'ajax' => true
