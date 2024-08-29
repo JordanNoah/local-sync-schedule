@@ -79,5 +79,12 @@ $functions = [
         'description' => 'get course grouping counter',
         'type' => 'read',
         'ajax' => true
+    ],
+    'local_sync_schedule_mod_schedule' => [
+        'classname' => 'local_sync_schedule\external_mod_schedule',
+        'methodname' => 'set_mod_schedule',
+        'description' => 'schedule a mod',
+        'type' => 'read',
+        'ajax' => true
     ]
 ];

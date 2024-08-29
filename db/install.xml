@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="local/sync_schedule/db" version="20240828" COMMENT="XMLDB file for Moodle local/sync_schedule">
+    <TABLES>
+        <TABLE NAME="local_sync_schedule_mod" COMMENT="local sync schedule mod schedule table">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="cmid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Specific activity's context"/>
+                <FIELD NAME="module_type" TPYE="text" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Module Type"/>
+                <FIELD NAME="course_id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="course Id"/>
+                <FIELD NAME="group_id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="group Id"/>
+                <FIELD NAME="start_date" TPYE="datetime" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="end_date" TPYE="datetime" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="created_at" TPYE="datetime" NOTNULL="true" SEQUENCE="false"/>
+                <FIELD NAME="updated_at" TPYE="datetime" NOTNULL="true" SEQUENCE="false"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+        </TABLE>
+    </TABLES>
+</XMLDB>
